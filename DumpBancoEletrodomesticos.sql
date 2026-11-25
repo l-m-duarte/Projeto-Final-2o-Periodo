@@ -1,5 +1,4 @@
--- Banco de dados do Sistema de Cadastro de Eletrodomésticos
--- MySQL 8 / InnoDB
+
 
 CREATE DATABASE IF NOT EXISTS bd_eletrodomesticos
     CHARACTER SET utf8mb4
@@ -7,7 +6,6 @@ CREATE DATABASE IF NOT EXISTS bd_eletrodomesticos
 
 USE bd_eletrodomesticos;
 
--- Remove as procedures antigas antes de recriar a estrutura.
 DROP PROCEDURE IF EXISTS sp_insereEletrodomestico;
 DROP PROCEDURE IF EXISTS sp_listaEletrodomesticos;
 DROP PROCEDURE IF EXISTS sp_listaDonos;
@@ -15,7 +13,6 @@ DROP PROCEDURE IF EXISTS sp_removeEletrodomestico;
 DROP PROCEDURE IF EXISTS update_eletrodomestico;
 DROP PROCEDURE IF EXISTS sp_insereDono;
 
--- Remove primeiro a tabela dependente e depois a tabela de donos.
 DROP TABLE IF EXISTS eletrodomesticos;
 DROP TABLE IF EXISTS donos;
 
